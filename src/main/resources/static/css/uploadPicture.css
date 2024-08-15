@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+.file_div{
+	width: 130px;
+	height: 165px;
+	border: 1px solid rgb(177, 204, 245);
+}
+.filetb1{
+	display: inline-block;
+	height: 32px;
+	line-height: 0px;
+	padding: 0 18px;
+	background-color: #009688;
+	color: #fff;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 14px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+	opacity: .9;
+	margin-top: 5px;
+	filter: alpha(opacity=90);
+}
+.layui-upload-img {
+	width: 130px;
+	height: 150px;
+}

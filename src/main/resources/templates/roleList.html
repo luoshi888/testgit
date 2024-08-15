@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/layui/css/layui.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/common.css}" />
+<style type="text/css">
+body .demo-class .layui-layer-title{
+	padding: 0 80px 0 20px;
+	height: 42px;
+	line-height: 42px;
+	border-bottom: 1px solid #eee;
+	font-size: 14px;
+	color: #FFFCFC;
+	overflow: hidden;
+	background-color: #3ABEDF;
+	border-radius: 2px 2px 0 0;
+}
+body .layui-layer-iframe .layui-layer-btn, .layui-layer-page .layui-layer-btn {
+	padding-top: 5px;
+	background-color: silver;
+	background-color: silver;
+}
+
+</style>
+</head>
+<body>
+<div class="seach">
+	<div class="formItem">
+		<label class="formLable">角色名称：</label>
+		<input  type="text" class="fromInput" name="roleName"  th:value="${roleName}"/>
+		<button onclick="seachRole()" data-method="offset" data-type="auto" class="seachBtn layui-btn-normal">搜索</button>
+	</div>
+</div>
+<div class="list">
+	<div class="list_menu">
+		<button onclick="addRole()" data-method="offset" data-type="auto" class="layui-btn layui-btn-normal">新增</button>
+	</div>
+		<div class="list_form">
+			<table class="list_table">
+				<colgroup>
+					<col width="150">
+					<col width="150">
+					<col width="200">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>角色名称</th>
+						<th>创建人</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="role,var : ${roleList}">
+						<td th:text="${role.roleName}"></td>
+						<td th:text="${role.createUser.userName}"></td>
+						<td>
+							<span th:if="${isUpdateRole} eq true">
+								<a href="javascript:void(0)" class="aBtn" th:onclick="|updateRole('${role.roleId}')|">修改</a>
+							</span>
+							<span th:if="${isUpdateRole}==false">
+								<a href="javascript:void(0)" class="aBtn a_black">修改</a>
+							</span>
+							
+							<span th:if="${isDeleteRole}==true and ${role.roleName}!='admin'">
+								<a href="javascript:void(0)" th:onclick="|deleteRole('${role.roleId}')|" class="aBtn">删除</a>
+							</span>
+							<span th:if="${isDeleteRole}==false">
+								<a href="javascript:void(0)" class="aBtn a_black" >删除</a>
+							</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+<script type="text/javascript"   th:src="@{/layui/layui.all.js}"></script>
+<script type="text/javascript"   th:src="@{/layui-master/dist/layui.js}"></script>
+<script type="text/javascript"   th:src="@{/js/jquery-1.6.2.min.js}"></script>
+<script type="text/javascript"   th:src="@{/js/role_jurisdiction.js}"></script>
+</html>

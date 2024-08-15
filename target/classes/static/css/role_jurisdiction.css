@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+.roleDiv {
+    border: 1px solid #d70000;
+    width: 99%;
+    height: 110px;
+    border-radius: 5px;
+}
+.jurisdictionDiv {
+    margin: 10px;
+}
+.jurisdictionInfo {
+    width: 98%;
+    min-height: 200px;
+    height: auto;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.group1 {
+    border: 1px solid red;
+    width: 95%;
+    min-height: 10px;
+    height: auto;
+    border-radius: 5px;
+    padding-top: 10px;
+    margin: 10px;
+}
+.j2{
+	margin: 10px;
+}

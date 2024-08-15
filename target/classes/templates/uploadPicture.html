@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>更换头像</title>
+<link rel="stylesheet" type="text/css" th:href="@{/layui/css/layui.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/uploadPicture.css}" />
+</head>
+<body>
+<div class="layui-upload">
+	  <div class="layui-upload-list" >
+	    <img class="layui-upload-img" id="demo1">
+	    <p id="demoText"></p>
+	  </div>
+  <button type="button" class="filetb1" id="test1">上传图片</button>
+</div>  
+<input type="hidden" name="pictruePath" th:value="${pictruePath}">
+</body>
+<script type="text/javascript"   th:src="@{/layui/layui.all.js}"></script>
+<script type="text/javascript"   th:src="@{/layui-master/dist/layui.js}"></script>
+<script type="text/javascript"   th:src="@{/js/jquery-1.6.2.min.js}"></script>
+<script type="text/javascript"   th:src="@{/js/uploadPicture.js}"></script>
+</html>

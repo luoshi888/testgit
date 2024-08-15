@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LsUI 主题框架</title>
+<link rel="shortcut icon" href="/images/login/ls_logo.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" th:href="@{/layui/css/layui.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+</head>
+<body onload="myLoad()">
+<!-- - -->
+<div id="body" class="body">
+	<div id="commHeaher" class="commHeaher">
+		<div id="logoAndName" class="logoAndName"></div>
+		<div id="other" class="other">
+			<input class="logout" type="button" value="退出" onclick="logout()"/>
+			<div class="simSetDiv"  onclick="showSysSinSet()"><span class="simSet">页面布局设置</span></div>
+		</div>
+		<div id="simSetDiv_info" class="simSetDiv_info" style="display: none">
+			<div class="radio_item">
+			      <input type="checkbox" name="left_menu" value="yes" class="radio_item_input" onclick="allowOpenMore()">
+			             <span>允许同时打开左侧主菜单</span>
+		   </div>
+			<div class="radio_item">
+			      <input type="checkbox" name="tab_menu" value="yes" class="radio_item_input">
+			      <span>允许无限打开tab页</span>
+		   </div>	
+		</div>
+	</div>
+	<div>
+		<div id="navigation" class="navigation">
+			<div id="cusUser" class="cusUser">
+				<div class="picture">
+					<img >
+				</div>
+				<div class="greetings">
+				    <br>
+					<span>欢迎</span>
+					<br>
+					<span>黄佳嘉</span>
+					<br>
+					<span id="up" class="up" onclick="showOwnSet()"></span>
+				</div>
+				<div id="selectDiv" class="selectDiv" style="display: none">
+					<div  class="sp1" onclick="updatePicture()">更换头像</div>
+					<div  class="sp1">个人资料</div>
+				</div>
+			</div>
+			<div id="navigation_1" class="navigation_1">
+				<div class="firstNt"><!-- 第一个一级目录 -->
+					<div class="first_menu" onclick="showNextPrev(this)"><span class="menu_pic1"></span>人员管理<span class="menu_pic_late1"></span></div>
+					<div id="two_menu_div" style="display: none">
+						<div id="menu1" class="two_menu" onclick="openTab(this)">内部人员<input type="hidden" value="/club/homeIframe"></div>
+						<div id="menu2" class="two_menu" onclick="openTab(this)">外部人员<input type="hidden" value="https://kbs.sports.qq.com/"></div>
+					</div>
+				</div>
+				<div class="firstNt"><!-- 第二个一级目录 -->
+					<div class="first_menu" onclick="showNextPrev(this)"><span class="menu_pic2"></span>club管理<span class="menu_pic_late1"></span></div>
+					<div id="two_menu_div" style="display: none">
+						<div id="menu5"  class="two_menu" onclick="openTab(this)">所有俱乐部<input type="hidden" value="/club/clubList"></div>
+						<div id="menu6"  class="two_menu" onclick="openTab(this)">我的俱乐部<input type="hidden" value="/club/clubList?myClub=1"></div>
+					</div>
+				</div>
+				<div class="firstNt"><!-- 第三个一级目录 -->
+					<div class="first_menu" onclick="showNextPrev(this)"><span class="menu_pic3"></span>活动管理<span class="menu_pic_late1"></span></div>
+					<div id="two_menu_div" style="display: none">
+						<div id="menu9" class="two_menu" onclick="openTab(this)">所有活动</div>
+						<div id="menu10" class="two_menu" onclick="openTab(this)">我申请的活动</div>
+					</div>
+				</div>
+				<div class="firstNt"><!-- 第四个一级目录 -->
+					<div class="first_menu" onclick="showNextPrev(this)"><span class="menu_pic4"></span>系统设置<span class="menu_pic_late1"></span></div>
+					<div id="two_menu_div" style="display: none">
+						<div id="menu13" class="two_menu" onclick="openTab(this)">审批流程配置</div>
+						<div id="menu14" class="two_menu" onclick="openTab(this)">系统类型配置</div>
+					</div>
+				</div>
+				<div class="firstNt">
+					<div class="first_menu" onclick="showNextPrev(this)"><span class="menu_pic5"></span>权限管理<span class="menu_pic_late1"></span></div>
+					<div id="two_menu_div" style="display: none">
+						<div id="menu17" class="two_menu" onclick="openTab(this)">角色设置<input type="hidden" value="/club/showRole"></div>
+						<div id="menu18" class="two_menu" onclick="openTab(this)">权限设置</div>
+					</div>
+				</div>
+				<div class="firstNt">
+					<div class="first_menu" onclick="showNextPrev(this)"><span class="menu_pic6"></span>大数据栈<span class="menu_pic_late1"></span></div>
+					<div id="two_menu_div" style="display: none">
+						<div id="menu19" class="two_menu" onclick="openTab(this)">活动数据可视化<input type="hidden" value="/club/bigDataShow"></div>
+						<div id="menu20" class="two_menu" onclick="openTab(this)">会员数据可视化</div>
+						<div id="menu21" class="two_menu" onclick="openTab(this)">会员分布地图</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="details" class="details">
+			<div id="navigation_2" class="navigation_2">
+				<div id="bank" class="bank"></div>
+				<div id="menu_tab_first" class="menu_comment" onclick="viewTab(this)"><span>首页</span></div>
+				<div id="next" class="next"></div>
+			</div>
+			<div id="details_1" class="details_1">
+				<iframe name="menu_tab_first" src="/club/Index" width="100%" height="100%" style="border:none;"></iframe>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" name="pictruePath" th:value="${pictruePath}">
+</div>
+</body>
+<script type="text/javascript"   th:src="@{/layui/layui.all.js}"></script>
+<script type="text/javascript"   th:src="@{/layui-master/dist/layui.js}"></script>
+<script type="text/javascript"   th:src="@{/js/jquery-1.6.2.min.js}"></script>
+<script type="text/javascript"   th:src="@{/js/home.js}"></script>
+</html>

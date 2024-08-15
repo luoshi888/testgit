@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>cn.gzsxt.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FalseRegisterServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>cn.gzsxt.servlet.FalseRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>cn.gzsxt.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Select_user_Servlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>cn.gzsxt.servlet.Select_user_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Update_User_Servlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>cn.gzsxt.servlet.Update_User_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Select_All_UserServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>cn.gzsxt.servlet.Select_All_UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Dele_User_Servlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>cn.gzsxt.servlet.Dele_User_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>All_User_UpdaeServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>cn.gzsxt.servlet.All_User_UpdaeServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/user/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FalseRegisterServlet</servlet-name>
+    <url-pattern>/user/FalseRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/user/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Select_user_Servlet</servlet-name>
+    <url-pattern>/user/Select_user_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Update_User_Servlet</servlet-name>
+    <url-pattern>/user/Update_User_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Select_All_UserServlet</servlet-name>
+    <url-pattern>/user/Select_All_UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Dele_User_Servlet</servlet-name>
+    <url-pattern>/user/Dele_User_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>All_User_UpdaeServlet</servlet-name>
+    <url-pattern>/user/All_User_UpdaeServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>

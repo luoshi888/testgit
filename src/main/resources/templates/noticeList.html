@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/layui/css/layui.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/common.css}" />
+</head>
+<body>
+			<span th:if="${countN}==0">
+				<div class="nullClass">暂无公告...</div>
+			</span>
+			<span th:if="${countN}>0">
+				<tr th:each="no,var : ${noticeList}">
+					<span th:if="${no.level}==0">
+						<div class="ntDiv"><a href="javaspript:void(0)" id="nt" style="color:red" th:text="${no.noticeName}"></a></div>
+					</span>
+					<span th:if="${no.level}!=0">
+						<div class="ntDiv"><a href="javaspript:void(0)" id="nt" th:text="${no.noticeName}"></a></div>
+					</span>
+				</tr>
+			</span>
+			<span th:if="${countN}>0">
+			<div id="pageN">
+			<input name="countN" type="hidden" th:value="${countN}"/>
+			<input name="pageN" type="hidden" th:value="${pageN}"/>
+			</div>
+			</span>
+</body>
+<script type="text/javascript"   th:src="@{/layui/layui.all.js}"></script>
+<script type="text/javascript"   th:src="@{/layui-master/dist/layui.js}"></script>
+<script type="text/javascript"   th:src="@{/js/jquery-1.6.2.min.js}"></script>
+<script type="text/javascript"   th:src="@{/js/Index.js}"></script>
+</html>

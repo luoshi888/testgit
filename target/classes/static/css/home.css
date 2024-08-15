@@ -1,0 +1,351 @@
+@CHARSET "UTF-8";
+
+body{
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.commHeaher{
+	width: 100%;
+	height: 70px;
+	background-color: blue;
+}
+.logoAndName{
+	width: 50%;
+	height: 70px;
+	float:left;
+	background-image: url("/images/login/logo2.png");
+	background-size: cover;
+}
+.other{
+	width: 50%;
+	height: 70px;
+	background-color: #566876;
+	float:left;
+}
+.navigation{
+	position:absolute;
+	width: 15%;
+	height: 570px;
+	background-color: gray;
+	float: left;
+}
+.details{
+	position:absolute;
+	width: 85%;
+	height: 607px;
+	background-color: green;
+	float: right;
+	right:0px;
+}
+.cusUser{
+	width: 100%;
+	height: 80px;
+	background-color: rgb(35,53,69);;
+}
+.picture{
+	float: left;
+	width: 80px;
+	height: 100%;
+	background-size: 100% 100%;
+	margin-left: 20px;
+	border-radius: 35px;
+}
+.picture img{
+	width: 80px;
+    height: 80px;
+    border-radius: 35px;
+}
+.up:AFTER{
+	content: "\25BC";
+}
+.greetings {
+	color: rgb(167,177,194);
+	float: right;
+	height: 100%;
+	width: 80px;
+	text-align: left;
+}
+.navigation_1{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(47,64,80);
+	overflow:auto;
+}
+.navigation_1::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 1px;
+}
+
+.navigation_1::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 2px;
+	-webkit-box-shadow: inset 0 0 5px rgba(236, 69, 69, 0.2);
+	background: #0C1558;
+}
+
+.navigation_1::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	border-radius: 2px;
+	background: #A6A5AC;
+}
+.navigation_2{
+	width: 100%;
+	height: 40px;
+	background-color: rgb(243,243,244);
+	font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.details_1{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(252, 252, 252);;
+}
+
+/*-----------------------*/
+.firstNt{
+	width: 100%;
+	height: auto;
+	/*margin-top: 10px;*/
+	font-family: "Microsoft JhengHei";
+	color :rgb(167,177,194);
+}
+.first_menu {
+	padding-top: 5px;
+	padding-bottom:5px;
+	padding-left: 20px;
+	font-size: 16px;
+}
+.first_menu:HOVER{
+	background-color:rgb(41,56,70);
+	color:rgb(255,255,255);
+}
+.two_menu {
+	padding-top: 5px;
+	padding-left: 40px;
+	font-size: 15px;
+	height: 25px;
+}
+.two_menu:HOVER{
+	background-color:rgb(41,56,70);
+	color:rgb(255,255,255);
+}
+.menu_pic1:BEFORE{
+	content: "\00A0\00A0\00A0";
+	background: url('/images/icons/user.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+.menu_pic2:BEFORE{
+    content: "\00A0\00A0\00A0";
+	background: url('/images/icons/club.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+.menu_pic3:BEFORE{
+	content: "\00A0\00A0\00A0";
+	background: url('/images/icons/activity.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+.menu_pic4:BEFORE{
+	content: "\00A0\00A0\00A0";
+	background: url('/images/icons/system.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+.menu_pic5:BEFORE{
+	content: "\00A0\00A0\00A0";
+	background: url('/images/icons/role.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+.menu_pic6:BEFORE{
+	content: "\00A0\00A0\00A0";
+	background: url('/images/icons/bigData.png') no-repeat;
+	background-size: 100% 100%;
+}
+.menu_pic_late1, .menu_pic_late2{
+	margin-left: 30px;
+	font-size: 14px;
+}
+.menu_pic_late1:AFTER{
+	content: "\25C4";
+}
+.menu_pic_late2:AFTER{
+	content: "\25BC";
+}
+.bank{
+	width:40px;
+	height: 40px;
+	background-color: rgb(255,255,255);
+	float: left;
+}
+.bank:BEFORE{
+	position: absolute;
+	padding-top: 10px;
+	padding-left: 15px;
+	content: "\00AB";
+}
+.next{
+	width:40px;
+	height: 40px;
+	background-color: rgb(255,255,255);
+	float: right;
+}
+.next:BEFORE{
+	position: absolute;
+	padding-top: 10px;
+	padding-left: 15px;
+	content: "\00BB";
+}
+.bank:hover, .next:hover{
+	background-color: #2F4050;
+	color:rgb(255,255,255);
+}
+.menu_tab{
+	float:left;
+	min-width: 60px;
+	height: 30px;
+	padding-top: 10px;
+	text-align:center;
+	border-bottom: none;
+	border-top: none;
+	background-color: rgb(227, 231, 230);
+	margin-left: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.menu_tab:hover{
+	background-color: #2F4050;
+	color:rgb(255,255,255);
+}
+.menu_comment{
+	float:left;
+	min-width: 60px;
+	height: 30px;
+	padding-top: 10px;
+	text-align:center;
+	border-bottom: none;
+	border-top: none;
+	margin-left: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #2F4050;
+	color:rgb(255,255,255);
+}
+.delLogo{
+	padding-top: 5px;
+	padding-left:5px
+}
+.delLogo:BEFORE{
+	content: "\2718";
+}
+.delLogo:hover{
+	color:red;
+}
+.logout{
+	float: right;
+	margin-right: 10px;
+	margin-top: 20px;
+	padding-top: 5px;
+	min-width: 50px;
+	height: 30px;
+	border: 0px;
+	background-color: #14CEA8;
+	border-radius: 2px;
+	font-size: 15px;
+}
+
+.simSetDiv{
+	float: right;
+	margin-right: 10px;
+	margin-top: 20px;
+	min-width: 120px;
+	height: 30px;
+	border: 0px;
+	background-color: #14CEA8;
+	border-radius: 2px;
+	font-size: 15px;
+}
+.logout:hover, .simSetDiv:hover{
+	background-color: #233545;
+	color:rgb(255,255,255);
+}
+.simSet {
+	position: absolute;
+	padding-top: 6px;
+}
+.simSet:BEFORE{
+	content: "\273B";
+}
+.selectDiv {
+	position: absolute;
+	width: 80px;
+	height: 100px;
+	background-color: rgb(250, 250, 250);
+	border-radius: 2px;
+	margin-left: 130px;
+	margin-top: 70px;
+	/*淡入的动画效果*/
+	-webkit-animation-name: fadeIn; /*动画名称*/
+	-webkit-animation-duration: 1s; /*动画持续时间*/
+	-webkit-animation-iteration-count: 1; /*动画次数*/
+	-webkit-animation-delay: 0s; /*延迟时间*/
+}
+/*淡入的动画效果*/
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0; /*初始状态 透明度为0*/
+	}
+	50% {
+		opacity: 0.5; /*中间状态 透明度为0*/
+	}
+	100% {
+		opacity: 1; /*结尾状态 透明度为1*/
+	}
+}
+.sp1{
+	width: 100%;
+	padding-left: 10px;
+	padding-top: 10px;
+	font-size: 13px;
+}
+.sp1:hover{
+	background-color: #233545;
+	color:rgb(250,250,250);
+}
+.simSetDiv_info {
+	position: absolute;
+	min-width: 260px;
+	min-height: 150px;
+	float: right;
+	right: 10px;
+	background-color: #2F4050;
+	color: rgb(250,250,250);
+	border-radius: 3px;
+	z-index: 1;
+	/*淡入的动画效果*/
+	-webkit-animation-name: fadeIn; /*动画名称*/
+	-webkit-animation-duration: 1s; /*动画持续时间*/
+	-webkit-animation-iteration-count: 1; /*动画次数*/
+	-webkit-animation-delay: 0s; /*延迟时间*/
+}
+.radio_item:HOVER{
+	background-color: #233545;
+	color:rgb(255,255,255);
+}
+.radio_item {
+	padding-top: 8px;
+	padding-left: 8px;
+	padding-bottom: 5px;
+}
+.radio_item_input {
+	position: absolute;
+	padding-top: 15px;
+	width: 20px;
+	height: 15px;
+	border: 1px solid rgb(243, 6, 72);
+}
+.radio_item span {
+	margin-left: 30px;
+}
+.layui-layer-btn .layui-layer-btn1 {
+	background-color: red;
+}
